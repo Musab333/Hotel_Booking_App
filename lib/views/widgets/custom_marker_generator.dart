@@ -74,7 +74,7 @@ class _CustomMarkerGeneratorState extends State<CustomMarkerGenerator> {
         globalKey.currentContext?.findRenderObject() as RenderRepaintBoundary;
     ui.Image image = await boundary.toImage(pixelRatio: 2);
     ByteData? byteData = await image.toByteData(format: ui.ImageByteFormat.png);
-    return BitmapDescriptor.fromBytes(byteData!.buffer.asUint8List());
+    return BitmapDescriptor.fromBytes(byteData.buffer.asUint8List());
   }
 }
 
