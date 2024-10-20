@@ -21,13 +21,16 @@ class CustomRating extends StatelessWidget {
       children: [
         for (int i = 1; i <= 5; i++)
           Container(
-            margin: const EdgeInsets.all(1),
-            height: size,
-            width: size,
-            decoration: BoxDecoration(
+            // decoration: BoxDecoration(
+            //   color: i <= ratingScore ? ColorName.yellow : Colors.white,
+            //   shape: BoxShape.circle,
+            //   border: Border.all(color: ColorName.yellow),
+            // ),
+            child: Icon(
+              Icons.star,
               color: i <= ratingScore ? ColorName.yellow : Colors.white,
-              shape: BoxShape.circle,
-              border: Border.all(color: ColorName.yellow, width: 2),
+              weight: size,
+              size: size + 12,
             ),
           ),
         const SizedBox(width: 12),
